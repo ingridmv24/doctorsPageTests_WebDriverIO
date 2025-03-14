@@ -33,8 +33,7 @@ describe("Doctors page", () => {
         addNewDoctorButton.click();
 
         //wait for visibility of modal window 
-        const newDoctorModal = await $('.new-doctor-dialog.e-popup');
-        $(newDoctorModal).waitForDisplayed();
+        await $('.new-doctor-dialog.e-popup').waitForDisplayed();
 
         //fill doctor's data
         const doctorNameInput = await $('[name="Name"]');
@@ -57,14 +56,14 @@ describe("Doctors page", () => {
         saveNewDoctorButton.click();
 
         //verify the modal is not displayed
-        await expect(newDoctorModal).not.toBeDisplayed()
+        await expect($('.new-doctor-dialog.e-popup')).not.toBeDisplayed()
 
         //verify new doctor is added
-        await expect($('#Specialist_8').$('.name')).toHaveText('Dr. John Doe'); //asi se busca un elemento dentro de otro, es encadenar elementos tan anidados como podamos
+        await expect($('#Specialist_8').$('.name')).toHaveText('Dr. John Doe');
         await expect($('#Specialist_8').$('.education')).toHaveText('Basic', { ignoreCase: true });
     });
 
-    it('Close a modal window for adding a new doctor', async () => {
+    it('Close a modal window before adding a new doctor', async () => {
         //click on doctors item in the side menu
         const doctorItem = await $("[routerlink='/doctors']");
         await doctorItem.click();
