@@ -1,5 +1,3 @@
-Web automation for the web site https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors using WebDriverIO framework with Javascript
-
 # Appointment Planner Test Automation
 
 ## Description
