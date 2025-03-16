@@ -7,7 +7,7 @@ class SideMenuComponent extends BaseComponent{
 
     //to get admin name from the sidebar
     get adminName() {
-        return this.rootElement$('.name');
+        return this.rootElement.$('.name');
     }
 
     //special method to pass a parameter for each item I want to work with
