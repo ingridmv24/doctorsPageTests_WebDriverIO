@@ -2,7 +2,7 @@ const DashboardPage = require("./dashboard.page");
 const DoctorsPage = require("./doctors.page");
 
 //Page factory where pages are created by a call
-// function tahta returns an instanciate of the class when the parameter is passed
+// function that returns an instanciate of the class when the parameter is passed
 /**
  * 
  * @param name {'dashboard' | 'doctors'}  
